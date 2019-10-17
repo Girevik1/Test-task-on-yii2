@@ -1,0 +1,11 @@
+{
+    "name": "user/yii-application",
+    "description": "\"example package\"",
+    "authors": [
+        {
+            "name": "GIREVIK1",
+            "email": "GIREVIK1988@GMAIL.COM"
+        }
+    ],
+    "require": {}
+}
