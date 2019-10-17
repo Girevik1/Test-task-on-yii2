@@ -1,8 +1,3 @@
-<?php
-
-use yii\widgets\LinkPager;
-
-?>
 <div>
     <center>
         <h1>

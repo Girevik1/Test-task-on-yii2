@@ -108,7 +108,6 @@ class Transaction extends \yii\db\ActiveRecord
             if ($sum < 0) {
                 // try to write off from the bonus balance first
                 // we can't write off more bonuses than user has
-                // so take the minimum between sum to write off and the balance
                 if (abs($sum) > $user->balance_bonus) {
                     $write_off_bonus = $user->balance_bonus;
                 } else {
