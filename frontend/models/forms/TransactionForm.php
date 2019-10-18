@@ -44,6 +44,15 @@ class TransactionForm extends Model
 
     /**
      * @return bool
+     */
+    public function beforeValidate()
+    {
+        $this->purpose = strip_tags($this->purpose);
+        return parent::beforeValidate();
+    }
+
+    /**
+     * @return bool
      * @throws \Throwable
      * @throws \frontend\components\NotEnoughMoneyException
      */
