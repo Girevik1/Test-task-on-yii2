@@ -29,6 +29,7 @@ class AdminController extends Controller
 
     public function actionEdit($id)
     {
+
         if (!Yii::$app->user->can('viewAdminPage')) {
             return $this->redirect(['site/index']);
         }

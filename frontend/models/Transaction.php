@@ -39,6 +39,7 @@ class Transaction extends \yii\db\ActiveRecord
             [['user_id', 'purpose', 'diff_rub', 'diff_bonus', 'balance_rub', 'balance_bonus', 'date'], 'required'],
             [['user_id'], 'integer'],
             [['purpose'], 'string', 'max' => 255],
+            // поле user_id должно быть существующей записью модели user, которая связана с текущей моделью по ключу id
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
             [['diff_rub', 'diff_bonus', 'balance_rub', 'balance_bonus'], 'number'],
             // format to 2 decimals

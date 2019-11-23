@@ -113,6 +113,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getTransactions()
     {
         return $this->hasMany(Transaction::className(), ['user_id' => 'id']);
